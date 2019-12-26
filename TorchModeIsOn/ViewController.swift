@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     let audioEngine = AVAudioEngine()
     
     //change your language here
-    // 
+    // z.B. "de-DE", "en-US"
     let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "de-DE"))
     let request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask: SFSpeechRecognitionTask?
@@ -103,7 +103,8 @@ class ViewController: UIViewController {
     }
     
     enum Color: String {
-        case Rot, Orange, Gelb, Grün, Blau, Lila, Schwarz, Grau, Pink
+        case Rot, Orange, Gelb, Grün, Blau, Lila, Schwarz, Grau, Pink,
+        rot, orange, gelb, grün, blau, lila, schwarz, grau, pink
         
         var create: UIColor {
             switch self {
@@ -124,6 +125,24 @@ class ViewController: UIViewController {
             case .Grau:
                 return UIColor.gray
             case .Pink:
+                return UIColor.systemPink
+            case .rot:
+                return UIColor.red
+            case .orange:
+                return UIColor.orange
+            case .gelb:
+                return UIColor.yellow
+            case .grün:
+                return UIColor.green
+            case .blau:
+                return UIColor.blue
+            case .lila:
+                return UIColor.purple
+            case .schwarz:
+                return UIColor.black
+            case .grau:
+                return UIColor.gray
+            case .pink:
                 return UIColor.systemPink
             }
         }
