@@ -11,11 +11,15 @@ import AVFoundation
 import Speech
 
 class ViewController: UIViewController {
-    @IBOutlet weak var recognizedTextLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+    
     @IBOutlet weak var colorView: UIView!
-    @IBOutlet weak var torchLabel: UILabel!
+
+    @IBOutlet weak var recognizedTextLabel: UILabel!
     @IBOutlet weak var appLabel: UILabel!
+
+    @IBOutlet weak var torchLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    
     
     let audioEngine = AVAudioEngine()
     
@@ -101,25 +105,25 @@ class ViewController: UIViewController {
     }
     
     enum Color: String {
-        case Red, Orange, Yellow, Green, Blue, Purple, Black, Gray
+        case Rot, Orange, Gelb, Grün, Blau, Lila, Schwarz, Grau
         
         var create: UIColor {
             switch self {
-            case .Red:
+            case .Rot:
                 return UIColor.red
             case .Orange:
                 return UIColor.orange
-            case .Yellow:
+            case .Gelb:
                 return UIColor.yellow
-            case .Green:
+            case .Grün:
                 return UIColor.green
-            case .Blue:
+            case .Blau:
                 return UIColor.blue
-            case .Purple:
+            case .Lila:
                 return UIColor.purple
-            case .Black:
+            case .Schwarz:
                 return UIColor.black
-            case .Gray:
+            case .Grau:
                 return UIColor.gray
             }
         }
@@ -134,6 +138,7 @@ class ViewController: UIViewController {
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
     }
+    
     
     @IBAction func startButton(_ sender: Any) {
         if isRecording == true {
@@ -229,8 +234,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func turnOfButtonTapped(_ sender: Any) {
-        
+    @IBAction func turnOffButtonTapped(_ sender: Any) {
         disableTorch()
     }
     
