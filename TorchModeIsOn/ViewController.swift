@@ -239,23 +239,26 @@ class ViewController: UIViewController {
     
     func disableTorch(){
         if let avDevice = AVCaptureDevice.default(for: AVMediaType.video){
-            if (avDevice.hasTorch){
+            if (avDevice.hasTorch) && avDevice.isTorchActive{
                 do {
                     try avDevice.lockForConfiguration()
                 } catch {
                     print("something: \(error)")
                 }
                 if avDevice.isTorchActive {
-                    avDevice.torchMode = AVCaptureDevice.TorchMode.off
+                        avDevice.torchMode = AVCaptureDevice.TorchMode.off
                 }
             }
             avDevice.unlockForConfiguration()
         }
     }
     
-    @IBAction func turnOffButtonTapped(_ sender: Any) {
+    
+    
+    @IBAction func torchModeOffTapped(_ sender: Any) {
         disableTorch()
     }
+    
     
 }
 

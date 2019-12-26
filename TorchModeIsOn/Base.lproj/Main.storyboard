@@ -30,8 +30,7 @@
                                         <rect key="frame" x="172.5" y="542" width="30" height="34"/>
                                         <state key="normal" title="🔦"/>
                                         <connections>
-                                            <action selector="turnOfButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8I-cE-oBV"/>
-                                            <action selector="turnOffButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbZ-SY-HrZ"/>
+                                            <action selector="torchModeOffTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vm-KD-cX9"/>
                                         </connections>
                                     </button>
                                 </subviews>
