@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,8 +40,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3K-5h-fSx">
-                                <rect key="frame" x="181" y="543" width="13" height="22.5"/>
-                                <state key="normal" backgroundImage="flashlight.off.fill" catalog="system"/>
+                                <rect key="frame" x="172.5" y="545" width="30" height="34"/>
+                                <state key="normal" title="🔦"/>
                                 <connections>
                                     <action selector="turnOfButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOS-CW-QmP"/>
                                 </connections>
@@ -51,13 +52,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="app.gift.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Si-sV-I0H">
-                                <rect key="frame" x="147.5" y="23" width="35" height="32.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="5Ye-Gl-H0R"/>
-                                    <constraint firstAttribute="height" constant="35" id="kJn-Kf-Yg4"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -72,8 +66,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2X-2G-BoN" secondAttribute="trailing" constant="87" id="OUu-dU-nbY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S6y-FM-uwC" secondAttribute="bottom" constant="147" id="cHb-OU-dEQ"/>
                             <constraint firstItem="S6y-FM-uwC" firstAttribute="top" secondItem="f2X-2G-BoN" secondAttribute="bottom" constant="50" id="ep9-kr-Bhe"/>
-                            <constraint firstItem="8cZ-yx-2W3" firstAttribute="leading" secondItem="3Si-sV-I0H" secondAttribute="trailing" constant="5" id="ma7-6C-0U8"/>
-                            <constraint firstItem="f2X-2G-BoN" firstAttribute="top" secondItem="3Si-sV-I0H" secondAttribute="bottom" constant="325" id="scL-d9-iTC"/>
                             <constraint firstItem="G3K-5h-fSx" firstAttribute="top" secondItem="S6y-FM-uwC" secondAttribute="bottom" constant="25" id="sxa-nu-eWT"/>
                             <constraint firstItem="S6y-FM-uwC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v50-2i-y8J"/>
                             <constraint firstItem="Qh6-CN-Cnx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y5V-an-LoV"/>
@@ -93,8 +85,4 @@
             <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="app.gift.fill" catalog="system" width="64" height="56"/>
-        <image name="flashlight.off.fill" catalog="system" width="36" height="64"/>
-    </resources>
 </document>
