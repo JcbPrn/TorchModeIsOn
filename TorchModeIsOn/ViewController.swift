@@ -13,10 +13,8 @@ import Speech
 class ViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
-
     @IBOutlet weak var recognizedTextLabel: UILabel!
     @IBOutlet weak var appLabel: UILabel!
-
     @IBOutlet weak var torchLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
@@ -105,7 +103,7 @@ class ViewController: UIViewController {
     }
     
     enum Color: String {
-        case Rot, Orange, Gelb, Grün, Blau, Lila, Schwarz, Grau
+        case Rot, Orange, Gelb, Grün, Blau, Lila, Schwarz, Grau, Pink
         
         var create: UIColor {
             switch self {
@@ -125,6 +123,8 @@ class ViewController: UIViewController {
                 return UIColor.black
             case .Grau:
                 return UIColor.gray
+            case .Pink:
+                return UIColor.systemPink
             }
         }
     }
