@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TorchModeIsOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh6-CN-Cnx">
+                                <rect key="frame" x="187.5" y="333.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6y-FM-uwC">
+                                <rect key="frame" x="152" y="490" width="71" height="30"/>
+                                <state key="normal" title="Start/Stop"/>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZV-8B-IoX"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2X-2G-BoN">
+                                <rect key="frame" x="87" y="382" width="201" height="58"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taschenlampe an ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVy-Hb-Spx">
+                                <rect key="frame" x="114" y="82.5" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3K-5h-fSx">
+                                <rect key="frame" x="181" y="543" width="13" height="22.5"/>
+                                <state key="normal" backgroundImage="flashlight.off.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="turnOfButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOS-CW-QmP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cZ-yx-2W3">
+                                <rect key="frame" x="187.5" y="55" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="app.gift.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Si-sV-I0H">
+                                <rect key="frame" x="147.5" y="23" width="35" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="5Ye-Gl-H0R"/>
+                                    <constraint firstAttribute="height" constant="35" id="kJn-Kf-Yg4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yVy-Hb-Spx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0nj-gt-nh5"/>
+                            <constraint firstItem="Qh6-CN-Cnx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Ej-ja-ZUV"/>
+                            <constraint firstItem="yVy-Hb-Spx" firstAttribute="top" secondItem="8cZ-yx-2W3" secondAttribute="bottom" constant="27.5" id="6HM-7E-DTW"/>
+                            <constraint firstItem="f2X-2G-BoN" firstAttribute="top" secondItem="Qh6-CN-Cnx" secondAttribute="bottom" constant="48.5" id="8P3-J5-hYX"/>
+                            <constraint firstItem="8cZ-yx-2W3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eqm-Jp-qnv"/>
+                            <constraint firstItem="f2X-2G-BoN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Kex-Xi-TBu"/>
+                            <constraint firstItem="Qh6-CN-Cnx" firstAttribute="top" secondItem="yVy-Hb-Spx" secondAttribute="bottom" constant="230" id="LKi-63-IAA"/>
+                            <constraint firstItem="G3K-5h-fSx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NgI-rJ-cCn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2X-2G-BoN" secondAttribute="trailing" constant="87" id="OUu-dU-nbY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S6y-FM-uwC" secondAttribute="bottom" constant="147" id="cHb-OU-dEQ"/>
+                            <constraint firstItem="S6y-FM-uwC" firstAttribute="top" secondItem="f2X-2G-BoN" secondAttribute="bottom" constant="50" id="ep9-kr-Bhe"/>
+                            <constraint firstItem="8cZ-yx-2W3" firstAttribute="leading" secondItem="3Si-sV-I0H" secondAttribute="trailing" constant="5" id="ma7-6C-0U8"/>
+                            <constraint firstItem="f2X-2G-BoN" firstAttribute="top" secondItem="3Si-sV-I0H" secondAttribute="bottom" constant="325" id="scL-d9-iTC"/>
+                            <constraint firstItem="G3K-5h-fSx" firstAttribute="top" secondItem="S6y-FM-uwC" secondAttribute="bottom" constant="25" id="sxa-nu-eWT"/>
+                            <constraint firstItem="S6y-FM-uwC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v50-2i-y8J"/>
+                            <constraint firstItem="Qh6-CN-Cnx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y5V-an-LoV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="appLabel" destination="8cZ-yx-2W3" id="17h-SX-Fnv"/>
+                        <outlet property="colorView" destination="f2X-2G-BoN" id="ke3-ph-NT4"/>
+                        <outlet property="recognizedTextLabel" destination="Qh6-CN-Cnx" id="axq-98-bmE"/>
+                        <outlet property="startButton" destination="S6y-FM-uwC" id="r8N-WP-z68"/>
+                        <outlet property="torchLabel" destination="yVy-Hb-Spx" id="VgD-8j-EoJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app.gift.fill" catalog="system" width="64" height="56"/>
+        <image name="flashlight.off.fill" catalog="system" width="36" height="64"/>
+    </resources>
 </document>
